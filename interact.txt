@@ -1,0 +1,16 @@
+pragma solidity ^0.5.16;
+
+interface YWSriToken {
+    function balanceOf(address _of) external view returns (uint256);
+}
+contract test {
+    
+    function show(address _add, address _of)
+        public view
+        returns (uint256 balance)
+    {
+
+        return YWSriToken(_add).balanceOf(_of);
+    }
+
+}
